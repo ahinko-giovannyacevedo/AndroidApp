@@ -4,8 +4,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:id="@+id/MyButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Hola!B" />
+        android:id="@+id/btnRound"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@drawable/roundButton"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#fff" />
 </LinearLayout>

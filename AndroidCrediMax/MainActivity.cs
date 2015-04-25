@@ -8,7 +8,7 @@ using Android.OS;
 
 namespace AndroidCrediMax
 {
-    [Activity(Label = "AndroidCrediMax", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "AndroidCrediMax", Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

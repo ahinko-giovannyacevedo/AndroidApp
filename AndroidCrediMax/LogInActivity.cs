@@ -12,18 +12,14 @@ using Android.Widget;
 
 namespace AndroidCrediMax
 {
-    using System.Threading;
-    using Android.App;
-    using Android.OS;
-
-    [Activity(Theme="@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
-    public class SplashActivity : Activity
+    [Activity(Label = "LogInActivity")]
+    public class LogInActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            Thread.Sleep(1000);
-            StartActivity(typeof(LogInActivity));
+            SetContentView(Resource.Layout.LogInLayout);
+            // Create your application here
         }
     }
 }
