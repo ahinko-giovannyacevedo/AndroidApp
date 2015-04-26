@@ -31,7 +31,7 @@
         <Button
             android:background="@drawable/roundButton"
             android:text="2"
-            android:id="@+id/btnNumPad_Second"
+            android:id="@+id/btnNumPad_Two"
             style="@style/button_pad" />
         <Button
             android:background="@drawable/roundButton"
@@ -77,7 +77,7 @@
         <Button
             android:background="@drawable/roundButton"
             android:text="8"
-            android:id="@+id/btnNumPad_Height"
+            android:id="@+id/btnNumPad_Eight"
             style="@style/button_pad" />
         <Button
             android:background="@drawable/roundButton"

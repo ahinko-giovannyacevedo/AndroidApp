@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("AndroidCrediMax.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("ahinko.android.credimax.Resource", IsApplication=true)]
 
-namespace AndroidCrediMax
+namespace ahinko.android.credimax
 {
 	
 	
@@ -78,23 +78,20 @@ namespace AndroidCrediMax
 			// aapt resource value: 0x7f06000a
 			public const int btnNumPad_Cero = 2131099658;
 			
+			// aapt resource value: 0x7f060008
+			public const int btnNumPad_Eight = 2131099656;
+			
 			// aapt resource value: 0x7f060005
 			public const int btnNumPad_Five = 2131099653;
 			
 			// aapt resource value: 0x7f060004
 			public const int btnNumPad_Four = 2131099652;
 			
-			// aapt resource value: 0x7f060008
-			public const int btnNumPad_Height = 2131099656;
-			
 			// aapt resource value: 0x7f060009
 			public const int btnNumPad_Nine = 2131099657;
 			
 			// aapt resource value: 0x7f060001
 			public const int btnNumPad_One = 2131099649;
-			
-			// aapt resource value: 0x7f060002
-			public const int btnNumPad_Second = 2131099650;
 			
 			// aapt resource value: 0x7f060007
 			public const int btnNumPad_Seven = 2131099655;
@@ -104,6 +101,9 @@ namespace AndroidCrediMax
 			
 			// aapt resource value: 0x7f060003
 			public const int btnNumPad_Three = 2131099651;
+			
+			// aapt resource value: 0x7f060002
+			public const int btnNumPad_Two = 2131099650;
 			
 			// aapt resource value: 0x7f060000
 			public const int txtKeyWord = 2131099648;

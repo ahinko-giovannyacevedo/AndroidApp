@@ -6,7 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace AndroidCrediMax
+namespace ahinko.android.credimax
 {
     [Activity(Label = "AndroidCrediMax", Icon = "@drawable/icon")]
     public class MainActivity : Activity
@@ -16,7 +16,7 @@ namespace AndroidCrediMax
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            //SetContentView(Resource.Layout.Main);
         }
     }
 }

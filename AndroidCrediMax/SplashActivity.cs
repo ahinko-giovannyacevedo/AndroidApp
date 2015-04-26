@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace AndroidCrediMax
+namespace ahinko.android.credimax
 {
     using System.Threading;
     using Android.App;
