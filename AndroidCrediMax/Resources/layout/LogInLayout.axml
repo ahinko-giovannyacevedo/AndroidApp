@@ -3,12 +3,104 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:id="@+id/btnRound"
-        android:layout_width="50sp"
-        android:layout_height="50sp"
-        android:background="@drawable/roundButton"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="1"
-        android:textColor="#fff" />
+        android:paddingTop="20dp">
+        <EditText
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtKeyWord"
+            android:hint="****" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="20dp">
+        <Button
+            android:id="@+id/btnNumPad_One"
+            android:background="@drawable/roundButton"
+            android:text="1"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="2"
+            android:id="@+id/btnNumPad_Second"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="3"
+            android:id="@+id/btnNumPad_Three"
+            style="@style/button_pad" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="20dp">
+        <Button
+            android:id="@+id/btnNumPad_Four"
+            android:background="@drawable/roundButton"
+            android:text="4"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="5"
+            android:id="@+id/btnNumPad_Five"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="6"
+            android:id="@+id/btnNumPad_Six"
+            style="@style/button_pad" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="20dp">
+        <Button
+            android:id="@+id/btnNumPad_Seven"
+            android:background="@drawable/roundButton"
+            android:text="7"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="8"
+            android:id="@+id/btnNumPad_Height"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="9"
+            android:id="@+id/btnNumPad_Nine"
+            style="@style/button_pad" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="20dp">
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="0"
+            android:id="@+id/btnNumPad_Cero"
+            style="@style/button_pad" />
+        <Button
+            android:background="@drawable/roundButton"
+            android:text="Confirmar"
+            android:id="@+id/btnConfirm"
+            style="@style/button_confirm" />
+    </LinearLayout>
 </LinearLayout>
