@@ -61,6 +61,7 @@
     <Compile Include="SQLite\SQLite.cs" />
     <Compile Include="SQLite\SQLiteAsync.cs" />
     <Compile Include="Utility\Utility.cs" />
+    <Compile Include="VendorMainActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -70,6 +71,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LogInLayout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\VendorMainLayout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -87,6 +91,9 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\roundButton.xml" />
+    <AndroidResource Include="Resources\menu\vendorMenu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

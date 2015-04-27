@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ahinko.android.credimax
 {
-    [Activity(Label = "LogInActivity")]
+    [Activity(Label = "@string/ApplicationName", NoHistory = true)]
     public class LogInActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -65,6 +65,7 @@ namespace ahinko.android.credimax
             if (c_txtKeyWord.Text.Trim().Length < 4)
             {
                 Toast.MakeText(this, "El codigo esta incompleto. Tiene que contener 4 digitos!", ToastLength.Short).Show();
+                return;
             }
             else
             {
@@ -73,6 +74,7 @@ namespace ahinko.android.credimax
 
             //Llamar al servicio web para validar las credenciales
             //Toast.MakeText(this, string.Format("Mi AndroidID es: {0}", Utility.Utility.GetAndroidID()), ToastLength.Short).Show(); 
+            StartActivity(typeof(VendorMainActivity));
         }
 
         private void ButtonNumPad_Click(object sender, EventArgs e) {
