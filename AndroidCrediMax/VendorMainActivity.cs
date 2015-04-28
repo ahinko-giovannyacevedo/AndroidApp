@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace ahinko.android.credimax
 {
-    [Activity(Label = "@string/ApplicationName")]
+    [Activity(Label = "@string/ApplicationName", Theme="@style/CustomActionBarTheme")]
     public class VendorMainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

@@ -72,8 +72,14 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f07000c
 			public const int MyButton = 2131165196;
 			
-			// aapt resource value: 0x7f07000e
-			public const int add = 2131165198;
+			// aapt resource value: 0x7f070012
+			public const int add = 2131165202;
+			
+			// aapt resource value: 0x7f07000f
+			public const int btnBorrar = 2131165199;
+			
+			// aapt resource value: 0x7f070010
+			public const int btnBuscar = 2131165200;
 			
 			// aapt resource value: 0x7f07000b
 			public const int btnConfirm = 2131165195;
@@ -108,23 +114,29 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f070002
 			public const int btnNumPad_Two = 2131165186;
 			
-			// aapt resource value: 0x7f070011
-			public const int call = 2131165201;
+			// aapt resource value: 0x7f070015
+			public const int call = 2131165205;
 			
-			// aapt resource value: 0x7f07000f
-			public const int phone = 2131165199;
+			// aapt resource value: 0x7f070013
+			public const int phone = 2131165203;
 			
-			// aapt resource value: 0x7f070012
-			public const int refresh = 2131165202;
+			// aapt resource value: 0x7f070016
+			public const int refresh = 2131165206;
 			
-			// aapt resource value: 0x7f070010
-			public const int submenu = 2131165200;
+			// aapt resource value: 0x7f070014
+			public const int submenu = 2131165204;
+			
+			// aapt resource value: 0x7f07000d
+			public const int textView1 = 2131165197;
+			
+			// aapt resource value: 0x7f07000e
+			public const int txtBarCodeSearch = 2131165198;
 			
 			// aapt resource value: 0x7f070000
 			public const int txtKeyWord = 2131165184;
 			
-			// aapt resource value: 0x7f07000d
-			public const int vendorMenu = 2131165197;
+			// aapt resource value: 0x7f070011
+			public const int vendorMenu = 2131165201;
 			
 			static Id()
 			{
@@ -196,8 +208,14 @@ namespace ahinko.android.credimax
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int Mono_Android_Theme_Splash = 2131034115;
+			// aapt resource value: 0x7f050006
+			public const int CustomActionBarTheme = 2131034118;
+			
+			// aapt resource value: 0x7f050005
+			public const int Mono_Android_Theme_Splash = 2131034117;
+			
+			// aapt resource value: 0x7f050007
+			public const int MyActionBar = 2131034119;
 			
 			// aapt resource value: 0x7f050000
 			public const int Theme_Splash = 2131034112;
@@ -205,8 +223,14 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f050002
 			public const int button_confirm = 2131034114;
 			
+			// aapt resource value: 0x7f050003
+			public const int button_gray = 2131034115;
+			
 			// aapt resource value: 0x7f050001
 			public const int button_pad = 2131034113;
+			
+			// aapt resource value: 0x7f050004
+			public const int label_gray = 2131034116;
 			
 			static Style()
 			{
