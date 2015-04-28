@@ -10,6 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+//To BarCode
+using ZXing;
+using ZXing.Mobile;
+
 namespace ahinko.android.credimax
 {
     [Activity(Label = "@string/ApplicationName", Theme="@style/CustomActionBarTheme")]
@@ -19,6 +23,28 @@ namespace ahinko.android.credimax
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.VendorMainLayout);
+
+            Button c_btnBuscar = FindViewById<Button>(Resource.Id.btnBuscar);
+            c_btnBuscar.Click += c_btnBuscar_Click;
+        }
+
+        async void c_btnBuscar_Click(object sender, EventArgs e)
+        {
+            var scanner = new MobileBarcodeScanner(this);
+            var result = await scanner.Scan();
+
+            Handleresult(result);
+        }
+
+        void Handleresult(ZXing.Result result) {
+            var msg = "No BarCode!";
+
+            if (result != null)
+            {
+                msg = "Barcode: " + result.Text + " [" + result.BarcodeFormat + "]";
+
+                Toast.MakeText(this, msg, ToastLength.Long).Show();
+            }
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

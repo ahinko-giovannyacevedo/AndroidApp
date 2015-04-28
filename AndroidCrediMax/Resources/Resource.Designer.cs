@@ -26,6 +26,9 @@ namespace ahinko.android.credimax
 		
 		public static void UpdateIdValues()
 		{
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::ahinko.android.credimax.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::ahinko.android.credimax.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::ahinko.android.credimax.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -72,8 +75,8 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f07000c
 			public const int MyButton = 2131165196;
 			
-			// aapt resource value: 0x7f070012
-			public const int add = 2131165202;
+			// aapt resource value: 0x7f070013
+			public const int add = 2131165203;
 			
 			// aapt resource value: 0x7f07000f
 			public const int btnBorrar = 2131165199;
@@ -114,17 +117,20 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f070002
 			public const int btnNumPad_Two = 2131165186;
 			
-			// aapt resource value: 0x7f070015
-			public const int call = 2131165205;
-			
-			// aapt resource value: 0x7f070013
-			public const int phone = 2131165203;
-			
 			// aapt resource value: 0x7f070016
-			public const int refresh = 2131165206;
+			public const int call = 2131165206;
+			
+			// aapt resource value: 0x7f070011
+			public const int contentFrame = 2131165201;
 			
 			// aapt resource value: 0x7f070014
-			public const int submenu = 2131165204;
+			public const int phone = 2131165204;
+			
+			// aapt resource value: 0x7f070017
+			public const int refresh = 2131165207;
+			
+			// aapt resource value: 0x7f070015
+			public const int submenu = 2131165205;
 			
 			// aapt resource value: 0x7f07000d
 			public const int textView1 = 2131165197;
@@ -135,8 +141,8 @@ namespace ahinko.android.credimax
 			// aapt resource value: 0x7f070000
 			public const int txtKeyWord = 2131165184;
 			
-			// aapt resource value: 0x7f070011
-			public const int vendorMenu = 2131165201;
+			// aapt resource value: 0x7f070012
+			public const int vendorMenu = 2131165202;
 			
 			static Id()
 			{
@@ -162,6 +168,12 @@ namespace ahinko.android.credimax
 			
 			// aapt resource value: 0x7f030003
 			public const int VendorMainLayout = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int zxingscanneractivitylayout = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int zxingscannerfragmentlayout = 2130903045;
 			
 			static Layout()
 			{
