@@ -3,28 +3,60 @@
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    style="@style/Layout_Color">
     <TextView
         android:text="Codigo"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        style="@style/label_gray"
+        android:id="@+id/textView1"
+        android:gravity="center" />
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        style="@style/label_gray" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtBarCodeSearch" />
-    <Button
-        android:text="Borrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnBorrar"
-        style="@style/button_gray" />
-    <Button
-        android:text="Buscar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/button_gray"
-        android:id="@+id/btnBuscar" />
+        android:background="#ECE6E3"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp"
+        android:layout_marginTop="5dp">
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="Buscar Codigo"
+            android:inputType="text"
+            android:background="@drawable/GradientEditTextStyle"
+            android:id="@+id/txtBarCodeSearch"
+            android:textColor="#756E68" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+            <Button
+                android:text="Borrar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBorrar"
+                style="@style/button_gray" />
+            <Button
+                android:text="Buscar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                style="@style/button_gray"
+                android:id="@+id/btnBuscar" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

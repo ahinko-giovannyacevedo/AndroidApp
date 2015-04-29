@@ -48,16 +48,19 @@ namespace ahinko.android.credimax
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int GradientEditTextStyle = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int monoandroidsplash = 2130837505;
+			public const int Icon = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int roundButton = 2130837506;
+			public const int monoandroidsplash = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int splash = 2130837507;
+			public const int roundButton = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int splash = 2130837508;
 			
 			static Drawable()
 			{
@@ -158,22 +161,25 @@ namespace ahinko.android.credimax
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int LogInLayout = 2130903040;
+			public const int ItemMainLayout = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int LogInLayout = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int SplashLayout = 2130903042;
+			public const int Main = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int VendorMainLayout = 2130903043;
+			public const int SplashLayout = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int zxingscanneractivitylayout = 2130903044;
+			public const int VendorMainLayout = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int zxingscannerfragmentlayout = 2130903045;
+			public const int zxingscanneractivitylayout = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int zxingscannerfragmentlayout = 2130903046;
 			
 			static Layout()
 			{
@@ -220,14 +226,20 @@ namespace ahinko.android.credimax
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050006
-			public const int CustomActionBarTheme = 2131034118;
+			// aapt resource value: 0x7f050007
+			public const int CustomActionBarTheme = 2131034119;
 			
 			// aapt resource value: 0x7f050005
-			public const int Mono_Android_Theme_Splash = 2131034117;
+			public const int Layout_Color = 2131034117;
 			
-			// aapt resource value: 0x7f050007
-			public const int MyActionBar = 2131034119;
+			// aapt resource value: 0x7f050006
+			public const int Mono_Android_Theme_Splash = 2131034118;
+			
+			// aapt resource value: 0x7f050008
+			public const int MyActionBar = 2131034120;
+			
+			// aapt resource value: 0x7f050009
+			public const int MyActionBarTitleText = 2131034121;
 			
 			// aapt resource value: 0x7f050000
 			public const int Theme_Splash = 2131034112;

@@ -16,7 +16,8 @@ using ZXing.Mobile;
 
 namespace ahinko.android.credimax
 {
-    [Activity(Label = "@string/ApplicationName", Theme="@style/CustomActionBarTheme")]
+    //, Theme="@style/CustomActionBarTheme"
+    [Activity(Label = "@string/ApplicationName", Theme = "@style/CustomActionBarTheme")]
     public class VendorMainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -26,6 +27,12 @@ namespace ahinko.android.credimax
 
             Button c_btnBuscar = FindViewById<Button>(Resource.Id.btnBuscar);
             c_btnBuscar.Click += c_btnBuscar_Click;
+
+            Button c_btnBorrar = FindViewById<Button>(Resource.Id.btnBorrar);
+            c_btnBorrar.Click += (object sender, EventArgs a) => {
+                EditText c_txtBarCodeSearch = FindViewById<EditText>(Resource.Id.txtBarCodeSearch);
+                c_txtBarCodeSearch.Text = "";
+            };
         }
 
         async void c_btnBuscar_Click(object sender, EventArgs e)
@@ -44,9 +51,12 @@ namespace ahinko.android.credimax
                 msg = "Barcode: " + result.Text + " [" + result.BarcodeFormat + "]";
 
                 Toast.MakeText(this, msg, ToastLength.Long).Show();
+
+                //Mostrar la pantalla donde se va a ver toda la informacion del Producto
             }
         }
 
+        #region Menu Derecha
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             base.OnCreateOptionsMenu(menu);
@@ -76,5 +86,6 @@ namespace ahinko.android.credimax
 
             return true;
         }
+        #endregion
     }
 }

@@ -67,10 +67,6 @@ namespace ahinko.android.credimax
                 Toast.MakeText(this, "El codigo esta incompleto. Tiene que contener 4 digitos!", ToastLength.Short).Show();
                 return;
             }
-            else
-            {
-                Toast.MakeText(this, "Has Presionado Confirmar!", ToastLength.Short).Show();
-            }
 
             //Llamar al servicio web para validar las credenciales
             //Toast.MakeText(this, string.Format("Mi AndroidID es: {0}", Utility.Utility.GetAndroidID()), ToastLength.Short).Show(); 
