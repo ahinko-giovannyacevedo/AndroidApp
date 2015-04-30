@@ -72,11 +72,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E4322B"
             android:id="@+id/textView5"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:background="@drawable/TextViewRedStyle"
+            style="@style/textview_red" />
     </LinearLayout>
 </LinearLayout>
