@@ -4,6 +4,7 @@
   <style name="CustomActionBarTheme"
          parent="@android:style/Theme.Holo.Light">
     <item name="android:actionBarStyle">@style/MyActionBar</item>
+    <item name="android:windowBackground">@color/bg</item>
   </style>
 
   <!-- ActionBar styles .Solid.Inverse-->
@@ -13,7 +14,14 @@
     <item name="android:background">#E4322B</item>
   </style>
 
-  <style name="MyActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" >
+  <style name="MyActionBarTitleText" 
+         parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title" >
     <item name="android:textColor">#FFFFFF</item>
   </style>
+
+  <style name="MyWindowBackGround" >
+    <item name="android:background">#C0C0C0</item>
+  </style>
+
+  <color name="bg">#C0C0C0</color>
 </resources>

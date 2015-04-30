@@ -2,6 +2,81 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+    android:layout_height="fill_parent"
+    style="@style/Layout_Color">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <Button
+            android:text=""
+            style="@style/button_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnShoppingCar"
+            android:drawableStart="@drawable/ic_shopping" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:shrinkColumns="1">
+            <TableRow>
+                <TextView
+                    style="@style/label_caption"
+                    android:text="Codigo.:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView4" />
+                <TextView
+                    android:text="1230009200"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtItemCode" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    style="@style/label_caption"
+                    android:text="Nombre.:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView4" />
+                <TextView
+                    android:text="Luminaria Dolphin"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtItemName" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    style="@style/label_caption"
+                    android:text="Descripcion.:"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/textView4" />
+                <TextView
+                    android:text="Led 120w Street light"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/txtItemDescription" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+<!-- Cada uno de los paneles -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Existencias"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E4322B"
+            android:id="@+id/textView5"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>

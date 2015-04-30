@@ -3,10 +3,7 @@
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingLeft="40dp"
-    android:paddingRight="40dp"
-    style="@style/Layout_Color">
+    android:layout_height="fill_parent">
     <TextView
         android:text="Codigo"
         android:textAppearance="?android:attr/textAppearanceMedium"

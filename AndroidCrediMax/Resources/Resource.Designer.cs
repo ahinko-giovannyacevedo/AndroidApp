@@ -44,6 +44,22 @@ namespace ahinko.android.credimax
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int bg = 2131099648;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
@@ -51,16 +67,22 @@ namespace ahinko.android.credimax
 			public const int GradientEditTextStyle = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int ic_shopping = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int monoandroidsplash = 2130837506;
+			public const int Icon = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int roundButton = 2130837507;
+			public const int monoandroidsplash = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int splash = 2130837508;
+			public const int radialBackground = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int roundButton = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int splash = 2130837510;
 			
 			static Drawable()
 			{
@@ -75,77 +97,92 @@ namespace ahinko.android.credimax
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f07000c
-			public const int MyButton = 2131165196;
+			// aapt resource value: 0x7f080011
+			public const int MyButton = 2131230737;
 			
-			// aapt resource value: 0x7f070013
-			public const int add = 2131165203;
+			// aapt resource value: 0x7f080018
+			public const int add = 2131230744;
 			
-			// aapt resource value: 0x7f07000f
-			public const int btnBorrar = 2131165199;
+			// aapt resource value: 0x7f080014
+			public const int btnBorrar = 2131230740;
 			
-			// aapt resource value: 0x7f070010
-			public const int btnBuscar = 2131165200;
+			// aapt resource value: 0x7f080015
+			public const int btnBuscar = 2131230741;
 			
-			// aapt resource value: 0x7f07000b
-			public const int btnConfirm = 2131165195;
+			// aapt resource value: 0x7f080010
+			public const int btnConfirm = 2131230736;
 			
-			// aapt resource value: 0x7f07000a
-			public const int btnNumPad_Cero = 2131165194;
+			// aapt resource value: 0x7f08000f
+			public const int btnNumPad_Cero = 2131230735;
 			
-			// aapt resource value: 0x7f070008
-			public const int btnNumPad_Eight = 2131165192;
+			// aapt resource value: 0x7f08000d
+			public const int btnNumPad_Eight = 2131230733;
 			
-			// aapt resource value: 0x7f070005
-			public const int btnNumPad_Five = 2131165189;
+			// aapt resource value: 0x7f08000a
+			public const int btnNumPad_Five = 2131230730;
 			
-			// aapt resource value: 0x7f070004
-			public const int btnNumPad_Four = 2131165188;
+			// aapt resource value: 0x7f080009
+			public const int btnNumPad_Four = 2131230729;
 			
-			// aapt resource value: 0x7f070009
-			public const int btnNumPad_Nine = 2131165193;
+			// aapt resource value: 0x7f08000e
+			public const int btnNumPad_Nine = 2131230734;
 			
-			// aapt resource value: 0x7f070001
-			public const int btnNumPad_One = 2131165185;
+			// aapt resource value: 0x7f080006
+			public const int btnNumPad_One = 2131230726;
 			
-			// aapt resource value: 0x7f070007
-			public const int btnNumPad_Seven = 2131165191;
+			// aapt resource value: 0x7f08000c
+			public const int btnNumPad_Seven = 2131230732;
 			
-			// aapt resource value: 0x7f070006
-			public const int btnNumPad_Six = 2131165190;
+			// aapt resource value: 0x7f08000b
+			public const int btnNumPad_Six = 2131230731;
 			
-			// aapt resource value: 0x7f070003
-			public const int btnNumPad_Three = 2131165187;
+			// aapt resource value: 0x7f080008
+			public const int btnNumPad_Three = 2131230728;
 			
-			// aapt resource value: 0x7f070002
-			public const int btnNumPad_Two = 2131165186;
+			// aapt resource value: 0x7f080007
+			public const int btnNumPad_Two = 2131230727;
 			
-			// aapt resource value: 0x7f070016
-			public const int call = 2131165206;
+			// aapt resource value: 0x7f080000
+			public const int btnShoppingCar = 2131230720;
 			
-			// aapt resource value: 0x7f070011
-			public const int contentFrame = 2131165201;
+			// aapt resource value: 0x7f08001b
+			public const int call = 2131230747;
 			
-			// aapt resource value: 0x7f070014
-			public const int phone = 2131165204;
+			// aapt resource value: 0x7f080016
+			public const int contentFrame = 2131230742;
 			
-			// aapt resource value: 0x7f070017
-			public const int refresh = 2131165207;
+			// aapt resource value: 0x7f080019
+			public const int phone = 2131230745;
 			
-			// aapt resource value: 0x7f070015
-			public const int submenu = 2131165205;
+			// aapt resource value: 0x7f08001c
+			public const int refresh = 2131230748;
 			
-			// aapt resource value: 0x7f07000d
-			public const int textView1 = 2131165197;
+			// aapt resource value: 0x7f08001a
+			public const int submenu = 2131230746;
 			
-			// aapt resource value: 0x7f07000e
-			public const int txtBarCodeSearch = 2131165198;
+			// aapt resource value: 0x7f080012
+			public const int textView1 = 2131230738;
 			
-			// aapt resource value: 0x7f070000
-			public const int txtKeyWord = 2131165184;
+			// aapt resource value: 0x7f080001
+			public const int textView4 = 2131230721;
 			
-			// aapt resource value: 0x7f070012
-			public const int vendorMenu = 2131165202;
+			// aapt resource value: 0x7f080013
+			public const int txtBarCodeSearch = 2131230739;
+			
+			// aapt resource value: 0x7f080002
+			public const int txtItemCode = 2131230722;
+			
+			// aapt resource value: 0x7f080004
+			public const int txtItemDescription = 2131230724;
+			
+			// aapt resource value: 0x7f080003
+			public const int txtItemName = 2131230723;
+			
+			// aapt resource value: 0x7f080005
+			public const int txtKeyWord = 2131230725;
+			
+			// aapt resource value: 0x7f080017
+			public const int vendorMenu = 2131230743;
 			
 			static Id()
 			{
@@ -194,8 +231,8 @@ namespace ahinko.android.credimax
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int vendorMenu = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int vendorMenu = 2131165184;
 			
 			static Menu()
 			{
@@ -226,20 +263,23 @@ namespace ahinko.android.credimax
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f050007
-			public const int CustomActionBarTheme = 2131034119;
+			// aapt resource value: 0x7f050008
+			public const int CustomActionBarTheme = 2131034120;
 			
 			// aapt resource value: 0x7f050005
 			public const int Layout_Color = 2131034117;
 			
-			// aapt resource value: 0x7f050006
-			public const int Mono_Android_Theme_Splash = 2131034118;
-			
-			// aapt resource value: 0x7f050008
-			public const int MyActionBar = 2131034120;
+			// aapt resource value: 0x7f050007
+			public const int Mono_Android_Theme_Splash = 2131034119;
 			
 			// aapt resource value: 0x7f050009
-			public const int MyActionBarTitleText = 2131034121;
+			public const int MyActionBar = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int MyActionBarTitleText = 2131034122;
+			
+			// aapt resource value: 0x7f05000b
+			public const int MyWindowBackGround = 2131034123;
 			
 			// aapt resource value: 0x7f050000
 			public const int Theme_Splash = 2131034112;
@@ -252,6 +292,9 @@ namespace ahinko.android.credimax
 			
 			// aapt resource value: 0x7f050001
 			public const int button_pad = 2131034113;
+			
+			// aapt resource value: 0x7f050006
+			public const int label_caption = 2131034118;
 			
 			// aapt resource value: 0x7f050004
 			public const int label_gray = 2131034116;

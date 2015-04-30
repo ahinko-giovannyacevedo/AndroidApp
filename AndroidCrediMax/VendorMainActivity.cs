@@ -37,10 +37,28 @@ namespace ahinko.android.credimax
 
         async void c_btnBuscar_Click(object sender, EventArgs e)
         {
-            var scanner = new MobileBarcodeScanner(this);
-            var result = await scanner.Scan();
+            EditText c_txtBarCodeSearch = FindViewById<EditText>(Resource.Id.txtBarCodeSearch);
 
-            Handleresult(result);
+            if (c_txtBarCodeSearch.Text.Trim().Length == 0)
+            {
+                var scanner = new MobileBarcodeScanner(this);
+                var result = await scanner.Scan();
+
+                Handleresult(result);
+            }
+            else
+            {
+                //Significa que decidio teclear el producto en vez de escanearlo
+                StartItemMainActivity(c_txtBarCodeSearch.Text.Trim());
+            }
+
+            c_txtBarCodeSearch.Text = "";
+        }
+
+        private void StartItemMainActivity(string barcode) {
+            var itemActivity = new Intent(this, typeof(ItemMainActivity));
+            itemActivity.PutExtra("barcode", barcode);
+            StartActivity(itemActivity);
         }
 
         void Handleresult(ZXing.Result result) {
@@ -55,6 +73,8 @@ namespace ahinko.android.credimax
                 //Mostrar la pantalla donde se va a ver toda la informacion del Producto
             }
         }
+
+        //Manipulando la devolucion de datos
 
         #region Menu Derecha
         public override bool OnCreateOptionsMenu(IMenu menu)
