@@ -27,8 +27,93 @@ namespace ahinko.android.credimax
 
             Button c_btnShoppingCar = FindViewById<Button>(Resource.Id.btnShoppingCar);
             c_btnShoppingCar.Click += (object sender, EventArgs e) => {
+
+                Db.Request r = new Db.Request();
+
+                r.Insert();
+                
                 Toast.MakeText(this, "Item Agregado al carro", ToastLength.Short).Show();
             };
+
+            /*
+             * Configurando el comportamiento de los layouts para simular un panel collapsable
+             * TODO: Como hacer un control de usuario para no repetir el mismo codigo varias veces
+             */
+
+            LinearLayout c_StockHeaderLayout = FindViewById<LinearLayout>(Resource.Id.StockHeaderLayout);
+            LinearLayout c_PriceHeaderLayout = FindViewById<LinearLayout>(Resource.Id.PriceHeaderLayout);
+            LinearLayout c_CreditHeaderLayout = FindViewById<LinearLayout>(Resource.Id.CreditHeaderLayout);
+            LinearLayout c_OtherHeaderLayout = FindViewById<LinearLayout>(Resource.Id.OtherHeaderLayout);
+
+            c_StockHeaderLayout.Click += GenericHeaderLayout_Click;
+            c_PriceHeaderLayout.Click += GenericHeaderLayout_Click;
+            c_CreditHeaderLayout.Click += GenericHeaderLayout_Click;
+            c_OtherHeaderLayout.Click += GenericHeaderLayout_Click;
+
+        }
+
+        private void GenericHeaderLayout_Click(object sender, EventArgs e)
+        {
+            LinearLayout layout = (LinearLayout)sender;
+            LinearLayout mLayout = null;
+            TextView mTextView = null;
+
+            switch (layout.Id)
+            {
+                case Resource.Id.StockHeaderLayout:
+                    mLayout = FindViewById<LinearLayout>(Resource.Id.StockMainLayout);
+                    mTextView = FindViewById<TextView>(Resource.Id.StockHeaderLabel);
+
+                    ChangeCollapsiblePanelStateLinearLayout(mLayout, mTextView);
+
+                    break;
+                case Resource.Id.PriceHeaderLayout:
+                    mLayout = FindViewById<LinearLayout>(Resource.Id.PriceMainLayout);
+                    mTextView = FindViewById<TextView>(Resource.Id.PriceHeaderLabel);
+
+                    ChangeCollapsiblePanelStateLinearLayout(mLayout, mTextView);
+
+                    break;
+                case Resource.Id.CreditHeaderLayout:
+                    mLayout = FindViewById<LinearLayout>(Resource.Id.CreditMainLayout);
+                    mTextView = FindViewById<TextView>(Resource.Id.CreditHeaderLabel);
+
+                    ChangeCollapsiblePanelStateLinearLayout(mLayout, mTextView);
+
+                    break;
+                case Resource.Id.OtherHeaderLayout:
+                    mLayout = FindViewById<LinearLayout>(Resource.Id.OtherMainLayout);
+                    mTextView = FindViewById<TextView>(Resource.Id.OtherHeaderLabel);
+
+                    ChangeCollapsiblePanelStateLinearLayout(mLayout, mTextView);
+
+                    break;
+                default:
+                    break;
+            }
+
+        }//en void
+
+        private void ChangeCollapsiblePanelStateLinearLayout(LinearLayout mLayout, TextView mTextView)
+        {
+            if (mLayout.Visibility == ViewStates.Gone || mLayout.Visibility == ViewStates.Invisible)
+            {
+                mLayout.Visibility = ViewStates.Visible;
+
+                if (mTextView != null)
+                {
+                    mTextView.SetBackgroundResource(Resource.Drawable.TextViewRedStyle);
+                }
+            }
+            else
+            {
+                mLayout.Visibility = ViewStates.Gone;
+
+                if (mTextView != null)
+                {
+                    mTextView.SetBackgroundResource(Resource.Drawable.TextViewGrayStyle);
+                }
+            }
         }
     }
 }

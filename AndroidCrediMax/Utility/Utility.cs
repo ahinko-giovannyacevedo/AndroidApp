@@ -14,6 +14,10 @@ namespace ahinko.android.credimax.Utility
 {
     public static class Utility
     {
+        /// <summary>
+        /// Retorna el Identificador unico del dispositivo.
+        /// </summary>
+        /// <returns></returns>
         public static string GetAndroidID() {
             string m_androidID = string.Empty;
             try

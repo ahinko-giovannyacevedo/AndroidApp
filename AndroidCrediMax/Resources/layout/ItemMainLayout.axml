@@ -64,16 +64,114 @@
     </LinearLayout>
 <!-- Cada uno de los paneles -->
     <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical"
         android:layout_width="fill_parent"
+        android:id="@+id/StockHeaderLayout"
         android:layout_height="wrap_content">
         <TextView
             android:text="Existencias"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5"
+            android:id="@+id/StockHeaderLabel"
             android:background="@drawable/TextViewRedStyle"
             style="@style/textview_red" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:id="@+id/StockMainLayout"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/PriceHeaderLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Precios"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PriceHeaderLabel"
+            android:background="@drawable/TextViewRedStyle"
+            style="@style/textview_red" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:id="@+id/PriceMainLayout"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/CreditHeaderLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Planes Financiamiento"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CreditHeaderLabel"
+            android:background="@drawable/TextViewRedStyle"
+            style="@style/textview_red" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:id="@+id/CreditMainLayout"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/OtherHeaderLayout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Complementarios"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/OtherHeaderLabel"
+            android:background="@drawable/TextViewRedStyle"
+            style="@style/textview_red" />
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:id="@+id/OtherMainLayout"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ic_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
     </LinearLayout>
 </LinearLayout>
