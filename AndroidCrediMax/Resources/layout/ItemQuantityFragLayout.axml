@@ -3,5 +3,37 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
+    <TextView xmlns:tools="http://schemas.android.com/tools"
+        android:text="Cantidad"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtQuantity" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+        <Button
+            android:text="Agregar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAceptar" />
+        <Button
+            android:text="Cancelar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCancelar" />
+    </LinearLayout>
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/pgbRunning"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible" />
 </LinearLayout>

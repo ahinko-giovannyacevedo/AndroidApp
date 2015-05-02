@@ -28,10 +28,12 @@ namespace ahinko.android.credimax
             Button c_btnShoppingCar = FindViewById<Button>(Resource.Id.btnShoppingCar);
             c_btnShoppingCar.Click += (object sender, EventArgs e) => {
 
-                Db.Request r = new Db.Request();
+                //Cargar el fragment que va a agregar al carrito de compra
 
-                r.Insert();
-                
+                var transaction = FragmentManager.BeginTransaction();
+                var dialogFragment = new ItemQuantityFragment();
+                dialogFragment.Show(transaction, "dialog_fragment");
+
                 Toast.MakeText(this, "Item Agregado al carro", ToastLength.Short).Show();
             };
 
