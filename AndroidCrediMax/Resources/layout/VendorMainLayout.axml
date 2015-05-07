@@ -55,5 +55,11 @@
                 style="@style/button_gray"
                 android:id="@+id/btnBuscar" />
         </LinearLayout>
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prgCallingWCF"
+            android:visibility="invisible" />
     </LinearLayout>
 </LinearLayout>

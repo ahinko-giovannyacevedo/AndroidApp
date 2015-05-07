@@ -9,22 +9,21 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace ahinko.android.credimax
 {
     [Activity(Label = "@string/ApplicationName", Theme = "@style/CustomActionBarTheme")]
     public class ItemMainActivity : Activity
     {
-        string barcode = string.Empty;
+        string json = string.Empty;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ItemMainLayout);
-            barcode = Intent.GetStringExtra("barcode") ?? "No Barcode Available";
-            // Create your application here
-            Toast.MakeText(this, barcode, ToastLength.Short).Show();
-
+            json = Intent.GetStringExtra("barcode") ?? "No Barcode Available";
+            
             Button c_btnShoppingCar = FindViewById<Button>(Resource.Id.btnShoppingCar);
             c_btnShoppingCar.Click += (object sender, EventArgs e) => {
 
@@ -52,6 +51,46 @@ namespace ahinko.android.credimax
             c_CreditHeaderLayout.Click += GenericHeaderLayout_Click;
             c_OtherHeaderLayout.Click += GenericHeaderLayout_Click;
 
+            //Cargar la data inicial
+            LoadData();
+        }
+
+        private void LoadData() {
+            List<DataContract.InventoryList> lObj = null;
+            DataContract.InventoryList iObj = null;
+
+            try
+            {
+                lObj = JsonConvert.DeserializeObject<List<DataContract.InventoryList>>(json);
+
+                if (lObj == null)
+                {
+                    Toast.MakeText(this, "El objecto no pudo ser deserializado", ToastLength.Long).Show();
+                    return;
+                }
+
+                //Llenar por el momento los campos principales
+                iObj = lObj[0];
+
+                TextView c_txtItemCode = FindViewById<TextView>(Resource.Id.txtItemCode);
+                TextView c_txtItemName = FindViewById<TextView>(Resource.Id.txtItemName);
+                TextView c_txtItemDescription = FindViewById<TextView>(Resource.Id.txtItemDescription);
+
+                c_txtItemCode.Text = iObj.pCodigo;
+                c_txtItemName.Text = iObj.nombre;
+                c_txtItemDescription.Text = iObj.descripcion;
+
+                ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
+                BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
+                c_lsvStock.Adapter = adapter;
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, ex.Message.ToString(), ToastLength.Long).Show();
+            }
+            finally {
+                lObj = null; iObj = null;
+            }
         }
 
         private void GenericHeaderLayout_Click(object sender, EventArgs e)

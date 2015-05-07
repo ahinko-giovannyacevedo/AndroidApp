@@ -4,7 +4,16 @@
   <style name="CustomActionBarTheme"
          parent="@android:style/Theme.Holo.Light">
     <item name="android:actionBarStyle">@style/MyActionBar</item>
-    <item name="android:windowBackground">@color/bg</item>
+    <item name="android:windowBackground">@color/MyWindowBackGround</item>
+
+    <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    <item name="android:actionBarWidgetTheme">@style/PopupMenuTextView</item>
+    <item name="android:popupMenuStyle">@style/PopupMenu</item>
+    
+    <!-- Change Overflow Menu ListView Item Height & Property -->
+    <item name="android:listPreferredItemHeightSmall">45dp</item>
+    <item name="android:listPreferredItemPaddingLeft">5dp</item>
+    <item name="android:listPreferredItemPaddingRight">5dp</item>
   </style>
 
   <!-- ActionBar styles .Solid.Inverse-->
@@ -19,9 +28,24 @@
     <item name="android:textColor">#FFFFFF</item>
   </style>
 
-  <style name="MyWindowBackGround" >
-    <item name="android:background">#C0C0C0</item>
+  <color name="MyWindowBackGround">#C0C0C0</color>
+
+  <!-- Change Overflow Menu ListView Divider Property -->
+  <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+    <item name="android:divider">#FF0000</item>
+    <item name="android:dividerHeight">2dp</item>
+    <item name="android:background">#33B5E5</item>
   </style>
 
-  <color name="bg">#C0C0C0</color>
+  <!-- Change Overflow Menu ListView Text Size and Text Size -->
+  <style name="PopupMenuTextView" parent="@style/android:Theme.Holo.Light">
+    <item name="android:textColor">#00FF00</item>
+    <item name="android:textSize">28dp</item>
+  </style>
+
+  <!-- Change Overflow Menu Background -->
+  <style name="PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+    <item name="android:popupBackground">#888888</item>
+  </style>
+  
 </resources>
