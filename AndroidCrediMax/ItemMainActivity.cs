@@ -28,7 +28,6 @@ namespace ahinko.android.credimax
             c_btnShoppingCar.Click += (object sender, EventArgs e) => {
 
                 //Cargar el fragment que va a agregar al carrito de compra
-
                 var transaction = FragmentManager.BeginTransaction();
                 var dialogFragment = new ItemQuantityFragment();
                 dialogFragment.Show(transaction, "dialog_fragment");
@@ -83,6 +82,11 @@ namespace ahinko.android.credimax
                 ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
                 BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
                 c_lsvStock.Adapter = adapter;
+
+                ListView c_lsvPrice = FindViewById<ListView>(Resource.Id.lsvPrice);
+                BaseAdapter.PriceListViewAdapter pAdapter = new BaseAdapter.PriceListViewAdapter(this, lObj);
+                c_lsvPrice.Adapter = pAdapter;
+
             }
             catch (Exception ex)
             {

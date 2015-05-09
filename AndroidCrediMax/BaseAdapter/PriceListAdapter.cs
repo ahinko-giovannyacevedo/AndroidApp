@@ -9,12 +9,13 @@ using Android.Views;
 
 namespace ahinko.android.credimax.BaseAdapter
 {
-    public class InventoryStockListViewAdapter : BaseAdapter<DataContract.InventoryList>
+    public class PriceListViewAdapter : BaseAdapter<DataContract.InventoryList>
     {
         public List<DataContract.InventoryList> _data;
         private Context _context;
 
-        public InventoryStockListViewAdapter(Context context, List<DataContract.InventoryList> data) {
+        public PriceListViewAdapter(Context context, List<DataContract.InventoryList> data)
+        {
             this._data = data;
             this._context = context;
         }
@@ -38,21 +39,26 @@ namespace ahinko.android.credimax.BaseAdapter
         {
             View row = convertView;
 
-            if (row == null)
+            if (row != null)
             {
-                row = LayoutInflater.From(_context).Inflate(Resource.Layout.StockRow_Layout,null, false);
+                row = LayoutInflater.From(_context).Inflate(Resource.Layout.StockRow_Layout, null, false);
             }
 
             DataContract.InventoryList iObj = this._data[position];
 
             if (iObj != null)
             {
-                //Controles
-                TextView c_txtWareHouse = row.FindViewById<TextView>(Resource.Id.txtWareHouse);
-                c_txtWareHouse.Text = iObj.bodega.ToString();
+                TextView c_txtSucursal = row.FindViewById<TextView>(Resource.Id.txtSucursal);
+                c_txtSucursal.Text = iObj.tienda.ToString();
 
-                TextView c_txtStock = row.FindViewById<TextView>(Resource.Id.txtStock);
-                c_txtStock.Text = "50";//TODO: Todavia no viene en el servicio
+                TextView c_txtPrecio = row.FindViewById<TextView>(Resource.Id.txtPrecio);
+                c_txtPrecio.Text = iObj.precioLista.ToString();
+
+                TextView c_txtPrecioEspecial = row.FindViewById<TextView>(Resource.Id.txtPrecioEspecial);
+                c_txtPrecioEspecial.Text = iObj.precioOferta.ToString();
+
+                TextView c_txtDescuento = row.FindViewById<TextView>(Resource.Id.txtDescuento);
+                c_txtDescuento.Text = iObj.descuentoMaximo.ToString();
             }
 
             return row;

@@ -68,13 +68,11 @@ namespace ahinko.android.credimax
                 var scanner = new MobileBarcodeScanner(this);
                 var result = await scanner.Scan();
 
-                Handleresult(result);
+                c_txtBarCodeSearch.Text = Handleresult(result);
             }
-            else
-            {
-                //Significa que decidio teclear el producto en vez de escanearlo
-                CallWCF_Inventory();
-            }
+            
+            //llamar al servicio web
+            CallWCF_Inventory(c_txtBarCodeSearch.Text);
         }
 
         private void StartItemMainActivity(string barcode) {
@@ -83,24 +81,25 @@ namespace ahinko.android.credimax
             StartActivity(itemActivity);
         }
 
-        void Handleresult(ZXing.Result result) {
-
+        private string Handleresult(ZXing.Result result) {
+            var msg = "";
             if (result != null)
             {
                 //msg = "Barcode: " + result.Text + " [" + result.BarcodeFormat + "]";
-                //Toast.MakeText(this, msg, ToastLength.Long).Show();
-                CallWCF_Inventory();
+                msg = result.Text;
             }
+
+            return msg;
         }
 
         //Manipulando la devolucion de datos
-        private void CallWCF_Inventory() {
+        private void CallWCF_Inventory(string barcode) {
             ProgressBar c_prgCallingWCF = FindViewById<ProgressBar>(Resource.Id.prgCallingWCF);
 
             try
             {
                 c_prgCallingWCF.Visibility = ViewStates.Visible;
-                client.ObtenerDatosAsync("0215003000", "credimax");
+                client.ObtenerDatosAsync(barcode, "credimax");
             }
             catch (Exception)
             {

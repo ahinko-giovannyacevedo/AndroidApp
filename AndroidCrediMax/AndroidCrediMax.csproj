@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseAdapter\InventoryStockListViewAdapter.cs" />
+    <Compile Include="BaseAdapter\PriceListAdapter.cs" />
     <Compile Include="DataContract\InventoryList.cs" />
     <Compile Include="Db\RequestDetail.cs" />
     <Compile Include="Db\Request.cs" />
@@ -120,6 +121,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\StockRow_Layout.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PriceRow_Layout.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
