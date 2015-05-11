@@ -12,7 +12,10 @@ namespace ahinko.android.credimax.Db
     {
         [PrimaryKey, AutoIncrement, Column("requestDetailID")]
         public int RequestDetailID { get; set; }
-        
+
+        [Indexed, Column("requestID")]
+        public int RequestID { get; set; }
+
         [Column("itemNumber")]
         public string ItemNumber { get; set; }
         

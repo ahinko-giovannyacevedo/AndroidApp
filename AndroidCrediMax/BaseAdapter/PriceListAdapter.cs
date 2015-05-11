@@ -39,7 +39,7 @@ namespace ahinko.android.credimax.BaseAdapter
         {
             View row = convertView;
 
-            if (row != null)
+            if (row == null)
             {
                 row = LayoutInflater.From(_context).Inflate(Resource.Layout.PriceRow_Layout, null, false);
             }

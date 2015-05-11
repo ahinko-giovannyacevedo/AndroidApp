@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+using ahinko.android.credimax.Db;
+
 namespace ahinko.android.credimax
 {
     [Activity(Label = "@string/ApplicationName", NoHistory = true)]
@@ -68,8 +70,15 @@ namespace ahinko.android.credimax
                 return;
             }
 
-            //Llamar al servicio web para validar las credenciales
-            //Toast.MakeText(this, string.Format("Mi AndroidID es: {0}", Utility.Utility.GetAndroidID()), ToastLength.Short).Show(); 
+            /*
+             * TODO: Llamar al servicio web para validar las credenciales
+             * Si la autentificacion es satisfactoria entonces ejecutar las lineas que siguen a continuacion
+             */
+            
+            //Inicializar la base de datos
+            SQLiteHelper sq = new SQLiteHelper();
+            sq.InitializeDataBase();
+
             StartActivity(typeof(VendorMainActivity));
         }
 

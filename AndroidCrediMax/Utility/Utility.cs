@@ -1,20 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using System;
+using System.Data;
+using System.IO;
 using System.ServiceModel;
 
 namespace ahinko.android.credimax.Utility
 {
-    public static class Utility
+    public static class AUtility
     {
+        public static readonly string DbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "ormcredimax.db3");
+
+        public static int RequestID { get; set; }
+
         /// <summary>
         /// Retorna el Identificador unico del dispositivo.
         /// </summary>
@@ -33,6 +30,10 @@ namespace ahinko.android.credimax.Utility
             return m_androidID;
         }
 
+        /// <summary>
+        /// Obtiene un objeto del Tipo BasicHttpBinding para configuracion de servicios en WCF
+        /// </summary>
+        /// <returns></returns>
         public static BasicHttpBinding GetBasicHttpBinding()
         {
             BasicHttpBinding binding = new BasicHttpBinding
@@ -48,6 +49,16 @@ namespace ahinko.android.credimax.Utility
             binding.ReceiveTimeout = timeout;
 
             return binding;
+        }
+
+        /// <summary>
+        /// Verifica si una cadena es un numero decimal
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static bool IsDecimal(string value){
+            Decimal outResult;
+            return decimal.TryParse(value, out outResult);
         }
     }
 }

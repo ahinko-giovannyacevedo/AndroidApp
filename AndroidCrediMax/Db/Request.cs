@@ -7,7 +7,7 @@ using System.Text;
 namespace ahinko.android.credimax.Db
 {
     [Table("Request")]
-    public class Request : SQLiteHelper
+    public class Request
     {
         [PrimaryKey, AutoIncrement, Column("requestID")]
         public int RequestID { get; set; }
@@ -29,18 +29,6 @@ namespace ahinko.android.credimax.Db
 
         [Column("customerName"), MaxLength(150)]
         public string CustomerName { get; set; }
-
-        public void Insert() {
-            this.Db.Insert(this);
-        }
-
-        public void Update() {
-            this.Db.Update(this);
-        }
-
-        public void Delete() {
-            this.Db.Delete(this);
-        }
     }
 
 }

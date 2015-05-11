@@ -16,13 +16,13 @@ namespace ahinko.android.credimax
     [Activity(Label = "@string/ApplicationName", Theme = "@style/CustomActionBarTheme")]
     public class ItemMainActivity : Activity
     {
-        string json = string.Empty;
+        private List<DataContract.InventoryList> lObj = null;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ItemMainLayout);
-            json = Intent.GetStringExtra("barcode") ?? "No Barcode Available";
+            string json = Intent.GetStringExtra("barcode") ?? "No Barcode Available";
 
             Button c_btnShoppingCar = FindViewById<Button>(Resource.Id.btnShoppingCar);
             c_btnShoppingCar.Click += (object sender, EventArgs e) =>
@@ -31,9 +31,23 @@ namespace ahinko.android.credimax
                 //Cargar el fragment que va a agregar al carrito de compra
                 var transaction = FragmentManager.BeginTransaction();
                 var dialogFragment = new ItemQuantityFragment();
-                dialogFragment.Show(transaction, "dialog_fragment");
+                dialogFragment.Cancelable = false;
+                //Buscar el primer registro y colocarlo. El precio de donde lo vamos a obtener
 
-                Toast.MakeText(this, "Item Agregado al carro", ToastLength.Short).Show();
+                if (lObj == null || lObj.Count <= 0)
+                {
+                    Toast.MakeText(this, "No hay nada que agregar al carro", ToastLength.Short).Show();
+                    return;
+                }
+
+                DataContract.InventoryList iObj = lObj[0];
+                string result = JsonConvert.SerializeObject(iObj);
+
+                var args = new Bundle();
+                args.PutString("item_obj", result);
+                //dialogFragment.Arguments.PutString("item_obj", result);
+                dialogFragment.Arguments = args;
+                dialogFragment.Show(transaction, "dialog_fragment");
             };
 
             /*
@@ -52,13 +66,12 @@ namespace ahinko.android.credimax
             c_OtherHeaderLayout.Click += GenericHeaderLayout_Click;
 
             //Cargar la data inicial
-            LoadData();
+            LoadData(json);
             //Mandar en segundo plano la solicitud de los planes de financiamiento asociados al producto
         }
 
-        private void LoadData()
+        private void LoadData(string json)
         {
-            List<DataContract.InventoryList> lObj = null;
             DataContract.InventoryList iObj = null;
 
             try
@@ -82,14 +95,16 @@ namespace ahinko.android.credimax
                 c_txtItemName.Text = iObj.nombre;
                 c_txtItemDescription.Text = iObj.descripcion;
 
-                //ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
-                //BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
-                //c_lsvStock.Adapter = adapter;
+                ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
+                BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
+                c_lsvStock.Adapter = adapter;
 
                 ListView c_lsvPrice = FindViewById<ListView>(Resource.Id.lsvPrice);
                 BaseAdapter.PriceListViewAdapter pAdapter = new BaseAdapter.PriceListViewAdapter(this, lObj);
                 c_lsvPrice.Adapter = pAdapter;
 
+                //TODO: Llenar los productos complementarios. todavia no esta desarrollado en el WS
+                //TODO: Consultar los Planes de financiamiento en base al producto (en realidad es en base al monto que se requiera).
             }
             catch (Exception ex)
             {
@@ -97,7 +112,8 @@ namespace ahinko.android.credimax
             }
             finally
             {
-                lObj = null; iObj = null;
+                //lObj = null; 
+                iObj = null;
             }
         }
 

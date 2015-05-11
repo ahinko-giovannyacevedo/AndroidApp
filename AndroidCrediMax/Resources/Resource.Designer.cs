@@ -297,19 +297,22 @@ namespace ahinko.android.credimax
 			public const int PriceRow_Layout = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int SplashLayout = 2130903045;
+			public const int ShoppingCartLayout = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int StockRow_Layout = 2130903046;
+			public const int SplashLayout = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int VendorMainLayout = 2130903047;
+			public const int StockRow_Layout = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int zxingscanneractivitylayout = 2130903048;
+			public const int VendorMainLayout = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int zxingscannerfragmentlayout = 2130903049;
+			public const int zxingscanneractivitylayout = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int zxingscannerfragmentlayout = 2130903050;
 			
 			static Layout()
 			{
