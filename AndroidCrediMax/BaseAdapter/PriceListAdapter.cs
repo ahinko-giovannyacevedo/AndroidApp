@@ -41,7 +41,7 @@ namespace ahinko.android.credimax.BaseAdapter
 
             if (row != null)
             {
-                row = LayoutInflater.From(_context).Inflate(Resource.Layout.StockRow_Layout, null, false);
+                row = LayoutInflater.From(_context).Inflate(Resource.Layout.PriceRow_Layout, null, false);
             }
 
             DataContract.InventoryList iObj = this._data[position];

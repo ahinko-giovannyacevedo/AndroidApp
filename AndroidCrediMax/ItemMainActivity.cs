@@ -23,9 +23,10 @@ namespace ahinko.android.credimax
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.ItemMainLayout);
             json = Intent.GetStringExtra("barcode") ?? "No Barcode Available";
-            
+
             Button c_btnShoppingCar = FindViewById<Button>(Resource.Id.btnShoppingCar);
-            c_btnShoppingCar.Click += (object sender, EventArgs e) => {
+            c_btnShoppingCar.Click += (object sender, EventArgs e) =>
+            {
 
                 //Cargar el fragment que va a agregar al carrito de compra
                 var transaction = FragmentManager.BeginTransaction();
@@ -52,9 +53,11 @@ namespace ahinko.android.credimax
 
             //Cargar la data inicial
             LoadData();
+            //Mandar en segundo plano la solicitud de los planes de financiamiento asociados al producto
         }
 
-        private void LoadData() {
+        private void LoadData()
+        {
             List<DataContract.InventoryList> lObj = null;
             DataContract.InventoryList iObj = null;
 
@@ -79,9 +82,9 @@ namespace ahinko.android.credimax
                 c_txtItemName.Text = iObj.nombre;
                 c_txtItemDescription.Text = iObj.descripcion;
 
-                ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
-                BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
-                c_lsvStock.Adapter = adapter;
+                //ListView c_lsvStock = FindViewById<ListView>(Resource.Id.lsvStock);
+                //BaseAdapter.InventoryStockListViewAdapter adapter = new BaseAdapter.InventoryStockListViewAdapter(this, lObj);
+                //c_lsvStock.Adapter = adapter;
 
                 ListView c_lsvPrice = FindViewById<ListView>(Resource.Id.lsvPrice);
                 BaseAdapter.PriceListViewAdapter pAdapter = new BaseAdapter.PriceListViewAdapter(this, lObj);
@@ -92,7 +95,8 @@ namespace ahinko.android.credimax
             {
                 Toast.MakeText(this, ex.Message.ToString(), ToastLength.Long).Show();
             }
-            finally {
+            finally
+            {
                 lObj = null; iObj = null;
             }
         }
@@ -141,24 +145,32 @@ namespace ahinko.android.credimax
 
         private void ChangeCollapsiblePanelStateLinearLayout(LinearLayout mLayout, TextView mTextView)
         {
-            if (mLayout.Visibility == ViewStates.Gone || mLayout.Visibility == ViewStates.Invisible)
+            try
             {
-                mLayout.Visibility = ViewStates.Visible;
-
-                if (mTextView != null)
+                if (mLayout.Visibility == ViewStates.Gone || mLayout.Visibility == ViewStates.Invisible)
                 {
-                    mTextView.SetBackgroundResource(Resource.Drawable.TextViewRedStyle);
+                    mLayout.Visibility = ViewStates.Visible;
+
+                    if (mTextView != null)
+                    {
+                        mTextView.SetBackgroundResource(Resource.Drawable.TextViewRedStyle);
+                    }
+                }
+                else
+                {
+                    mLayout.Visibility = ViewStates.Gone;
+
+                    if (mTextView != null)
+                    {
+                        mTextView.SetBackgroundResource(Resource.Drawable.TextViewGrayStyle);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                mLayout.Visibility = ViewStates.Gone;
-
-                if (mTextView != null)
-                {
-                    mTextView.SetBackgroundResource(Resource.Drawable.TextViewGrayStyle);
-                }
+                Toast.MakeText(this, ex.Message.ToString(), ToastLength.Short).Show();
             }
+
         }
     }
 }
